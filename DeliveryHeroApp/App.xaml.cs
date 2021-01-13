@@ -1,8 +1,5 @@
-﻿using System;
+﻿using DeliveryHeroApp.Core;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using DeliveryHeroApp.Services;
-using DeliveryHeroApp.Views;
 
 namespace DeliveryHeroApp
 {
@@ -13,7 +10,7 @@ namespace DeliveryHeroApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<IDataStore<RouteStop>,MockDataStore>();
             MainPage = new AppShell();
         }
 

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryHeroApp.iOS", "Deli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryHeroApp", "DeliveryHeroApp\DeliveryHeroApp.csproj", "{7B2BED95-4DE9-4FA1-A35E-800774758D8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeliveryHeroApp.Core", "DeliveryHeroApp.Core\DeliveryHeroApp.Core.csproj", "{679F6057-B0C5-4770-9C4B-0EB279D0E79F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{7B2BED95-4DE9-4FA1-A35E-800774758D8F}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{7B2BED95-4DE9-4FA1-A35E-800774758D8F}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{7B2BED95-4DE9-4FA1-A35E-800774758D8F}.Release|iPhone.Build.0 = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{679F6057-B0C5-4770-9C4B-0EB279D0E79F}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
