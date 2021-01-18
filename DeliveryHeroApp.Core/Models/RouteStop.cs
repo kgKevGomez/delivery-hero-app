@@ -4,14 +4,13 @@ namespace DeliveryHeroApp.Core
 {
     public class RouteStop
     {
-        public string CustomerName { get; set; }
-    }
+        public RouteStop(string customerName, Address address)
+        {
+            CustomerName = customerName;
+            Address = address;
+        }
 
-    public class Address
-    {
-        public string Street { get; set; }
-        public string HouseNumber { get; set; }
-        public string PostalCode { get; set; }
-        public string Remarks { get; set; }
+        public string CustomerName { get; set; }
+        public Address Address { get; set; }
     }
 }
