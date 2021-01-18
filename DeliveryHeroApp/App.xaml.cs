@@ -10,7 +10,7 @@ namespace DeliveryHeroApp
         {
             InitializeComponent();
 
-            DependencyService.Register<IDataStore<RouteStop>,MockDataStore>();
+            //DependencyService.Register<IRouteStopsDataStore<RouteStop>,MockDataStore>();
             MainPage = new AppShell();
         }
 

@@ -32,6 +32,7 @@
 
     
     <ShellContent Title="Deliveries for today" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:RouteStopsPage}" />
+    <ShellContent Route="RouteStopDetails" ContentTemplate="{DataTemplate local:RouteStopDetailsPage}" />
 
     <!--
         If you would like to navigate to this content you can do so by calling

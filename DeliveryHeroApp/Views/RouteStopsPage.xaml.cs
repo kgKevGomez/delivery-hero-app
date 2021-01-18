@@ -8,30 +8,32 @@ namespace DeliveryHeroApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RouteStopsPage : ContentPage
     {
-        public RouteStopsViewModel ViewModel { get; }
+        private RouteStopsViewModel viewModel { get; }
 
         public RouteStopsPage()
         {
             InitializeComponent();
 
-            ViewModel = new RouteStopsViewModel(new MockDataStore());
+            viewModel = new RouteStopsViewModel(new MockRouteStopsDataStore());
 
-            BindingContext = ViewModel;
+            BindingContext = viewModel;
         }
 
         async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.SelectedItem == null)
+            if (!(e.SelectedItem is RouteStop routeStop))
                 return;
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            //Turns out that relative routes and passing parameters is not supported when Forms < 4.7 ?
+            //Instead an absolute route must be used but that will replace navigation stack
+            await Shell.Current.GoToAsync($"RouteStopDetails?routeId={routeStop.Id}");
 
             RouteStopsListView.SelectedItem = null;
         }
 
         async void ContentPage_Appearing(object sender, System.EventArgs e)
         {
-            await ViewModel.FetchRouteStops(); //Proper place to invoke async loading methods?
+            await viewModel.FetchRouteStops(); //Proper place to invoke async loading methods?
         }
     }
 }

@@ -2,8 +2,9 @@
 
 namespace DeliveryHeroApp.Core
 {
-    public interface IDataStore<T>
+    public interface IRouteStopsDataStore
     {
         Task<RouteStop[]> GetRouteStops();
+        Task<RouteStop> GetRoute(long id);
     }
 }
