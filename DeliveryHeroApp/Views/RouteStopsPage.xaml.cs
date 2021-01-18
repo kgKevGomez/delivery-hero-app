@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using DeliveryHeroApp.Core;
+﻿using DeliveryHeroApp.Core;
 using DeliveryHeroApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -16,21 +15,23 @@ namespace DeliveryHeroApp.Views
             InitializeComponent();
 
             ViewModel = new RouteStopsViewModel(new MockDataStore());
-            ViewModel.FetchRouteStops().Wait(); //Proper place to invoke async loading methods?
 
             BindingContext = ViewModel;
         }
 
-
-        async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
+        async void ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.SelectedItem == null)
                 return;
 
             await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
 
-            //Deselect Item
-            ((ListView)sender).SelectedItem = null;
+            RouteStopsListView.SelectedItem = null;
+        }
+
+        async void ContentPage_Appearing(object sender, System.EventArgs e)
+        {
+            await ViewModel.FetchRouteStops(); //Proper place to invoke async loading methods?
         }
     }
 }

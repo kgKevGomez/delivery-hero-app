@@ -9,11 +9,20 @@ namespace DeliveryHeroApp.ViewModels
     public class RouteStopsViewModel : BaseViewModel
     {
         private readonly IDataStore<RouteStop> routeStopsStore;
+        private ObservableCollection<RouteStop> routeStops;
 
-        public ObservableCollection<RouteStop> RouteStops { get; set; } = new ObservableCollection<RouteStop>();
+        public ObservableCollection<RouteStop> RouteStops
+        {
+            get { return routeStops; }
+            set
+            {
+                SetProperty(ref routeStops, value);
+            }
+        }
 
         public RouteStopsViewModel(IDataStore<RouteStop> routeStopsStore)
         {
+            routeStops = new ObservableCollection<RouteStop>();
             this.routeStopsStore = routeStopsStore;
         }
 
