@@ -11,7 +11,7 @@ namespace DeliveryHeroApp
             InitializeComponent();
 
             //DependencyService.Register<IRouteStopsDataStore<RouteStop>,MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

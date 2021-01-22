@@ -24,9 +24,7 @@ namespace DeliveryHeroApp.Views
             if (!(e.SelectedItem is RouteStop routeStop))
                 return;
 
-            //Turns out that relative routes and passing parameters is not supported when Forms < 4.7 ?
-            //Instead an absolute route must be used but that will replace navigation stack
-            await Shell.Current.GoToAsync($"RouteStopDetails?routeId={routeStop.Id}");
+            await Navigation.PushAsync(new RouteStopDetailsPage(routeStop.Id));
 
             RouteStopsListView.SelectedItem = null;
         }

@@ -5,28 +5,22 @@ using Xamarin.Forms;
 
 namespace DeliveryHeroApp.Views
 {
-    [QueryProperty("RouteId", "routeId")]
     public partial class RouteStopDetailsPage : ContentPage
     {
-        public string RouteId {
-            get => routeId;
-            set => routeId = Uri.UnescapeDataString(value); //Unable to bind to long directly????
-        }
-
+        private readonly long routeId;
         private RouteStopDetailsViewModel viewModel;
-        private string routeId;
 
-        public RouteStopDetailsPage()
+        public RouteStopDetailsPage(long routeId)
         {
             InitializeComponent();
 
             viewModel = new RouteStopDetailsViewModel(new MockRouteStopsDataStore());
+            this.routeId = routeId;
         }
 
         async void ContentPage_Appearing(object sender, EventArgs e)
         {
-            if (routeId != null)
-                await viewModel.LoadRouteDetails(long.Parse(routeId));
+            await viewModel.LoadRouteDetails(routeId);
         }
 
     }
