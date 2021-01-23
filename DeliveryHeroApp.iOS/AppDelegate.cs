@@ -24,6 +24,13 @@ namespace DeliveryHeroApp.iOS
         {
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init();
+
+            #if ENABLE_TEST_CLOUD
+
+            Xamarin.Calabash.Start();
+
+            #endif
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

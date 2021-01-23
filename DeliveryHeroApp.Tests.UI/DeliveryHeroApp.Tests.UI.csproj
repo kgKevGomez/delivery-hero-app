@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.UITest.3.0.13\build\Xamarin.UITest.props" Condition="Exists('..\packages\Xamarin.UITest.3.0.13\build\Xamarin.UITest.props')" />
   <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -31,7 +32,7 @@
       <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.UITest">
-      <HintPath>..\packages\Xamarin.UITest.3.0.5\lib\net45\Xamarin.UITest.dll</HintPath>
+      <HintPath>..\packages\Xamarin.UITest.3.0.13\lib\net45\Xamarin.UITest.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +46,12 @@
     <ProjectReference Include="..\DeliveryHeroApp.Android\DeliveryHeroApp.Android.csproj">
       <Project>{D6027380-FE77-4048-B470-A2123FAA6E41}</Project>
       <Name>DeliveryHeroApp.Android</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\DeliveryHeroApp.iOS\DeliveryHeroApp.iOS.csproj">
+      <Project>{A598BF19-00AF-4148-986F-D279463E91FA}</Project>
+      <Name>DeliveryHeroApp.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
