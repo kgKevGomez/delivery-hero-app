@@ -4,7 +4,8 @@
     <ListView x:Name="RouteStopsListView"
               ItemsSource="{Binding RouteStops}"
               ItemSelected="ItemSelected"
-              CachingStrategy="RecycleElement">
+              CachingStrategy="RecycleElement"
+              AutomationId="RouteListView">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <TextCell Text="{Binding CustomerName}" Detail="{Binding Address}" />
