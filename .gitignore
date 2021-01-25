@@ -403,3 +403,5 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+*mono_crash*.json
+**/mono_crash*.json

@@ -54,7 +54,6 @@
     <MtouchLink>None</MtouchLink>
     <CodesignExtraArgs></CodesignExtraArgs>
     <OptimizePNGs></OptimizePNGs>
-    <PublicSign>false</PublicSign>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
